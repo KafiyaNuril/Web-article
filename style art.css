@@ -33,6 +33,10 @@ nav ul {
     justify-content: space-around;
 }
 
+#hamnav label, #hamburger {
+    display: none;
+}
+
 .logo {
     font-weight: bold;
     font-size: 40px;
@@ -126,7 +130,7 @@ footer {
 }
 
 .footer h4 {
-    padding: 60px 5px 10px 5px;
+    text-align: center;
     color: #cce5fa;
 }
 
@@ -144,6 +148,11 @@ footer {
   transition: all 0.5s ease;
 }
 
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
 .footer-end .container {
     color: #cce5fa;
 }
@@ -155,4 +164,50 @@ footer {
     margin: 0;
     padding: 5px 0;
     text-align: center;
+}
+
+@media screen and (max-width:430px) {
+    #hamnav label {
+        display: inline-block;
+        color: black;
+        background-color: #d3ecfa;
+        font-style: normal;
+        font-size: 1.2em;
+        margin-top: 15px;
+        padding: 10px 15px;
+    }
+
+    nav li {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #333;
+    }
+
+    nav ul {
+        display: none;
+        background-color: #d3ecfa;
+    }
+
+    nav input:checked ~ ul {
+        display: block;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home h1 {
+        padding-top: 100px;
+    }
+
+    .article2 {
+        display: block;
+    }
+
+    .ombak {
+        display: flex;
+        padding-right: 0px;
+        justify-content: center;
+    }
 }
